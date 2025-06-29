@@ -76,3 +76,4 @@
     </form>
   </motion.div>
 </div>
+export default ContactSection;
