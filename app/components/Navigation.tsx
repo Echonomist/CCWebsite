@@ -30,9 +30,9 @@ export default function Navigation() {
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <div className="text-2xl font-bold gradient-text">Chocolate.codes</div>
-
-          {/* Desktop Navigation */}
+          <div className="text-2xl font-bold gradient-text">
+            Chocolate.codes
+          </div>
           <div className="hidden md:flex space-x-8">
             {navItems.map((item) => (
               <a
@@ -44,14 +44,13 @@ export default function Navigation() {
               </a>
             ))}
           </div>
-
-          {/* Mobile Menu Button */}
-          <button className="md:hidden text-white" onClick={() => setIsOpen(!isOpen)}>
+          <button
+            className="md:hidden text-white"
+            onClick={() => setIsOpen(!isOpen)}
+          >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
-
-        {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden glass-effect rounded-lg mt-2 p-4">
             {navItems.map((item) => (
