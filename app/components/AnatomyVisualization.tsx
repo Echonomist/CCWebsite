@@ -1,3 +1,4 @@
+cat > app/components/AnatomyVisualization.tsx << 'EOF'
 'use client';
 
 import { useRef, useEffect, useState } from 'react';
@@ -86,7 +87,7 @@ function HumanBodyModel({ progress }: { progress: number }) {
     rightLeg.position.set(0.6, -2.5, 0);
     parts.push(rightLeg);
 
-    // Clear previous and add new
+    // Clear & add
     meshRef.current.clear();
     parts.forEach(part => meshRef.current!.add(part));
     setBodyParts(parts);
@@ -117,3 +118,4 @@ export default function AnatomyVisualization({ scrollY }: AnatomyVisualizationPr
     </div>
   );
 }
+EOF
