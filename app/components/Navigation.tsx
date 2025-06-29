@@ -33,7 +33,8 @@ export default function Navigation() {
           <div className="text-2xl font-bold gradient-text">
             Chocolate.codes
           </div>
-          
+
+          {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
             {navItems.map((item) => (
               <a
@@ -46,6 +47,7 @@ export default function Navigation() {
             ))}
           </div>
 
+          {/* Mobile Menu Button */}
           <button
             className="md:hidden text-white"
             onClick={() => setIsOpen(!isOpen)}
@@ -54,6 +56,7 @@ export default function Navigation() {
           </button>
         </div>
 
+        {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden glass-effect rounded-lg mt-2 p-4">
             {navItems.map((item) => (
@@ -70,3 +73,5 @@ export default function Navigation() {
         )}
       </div>
     </nav>
+  )
+}
